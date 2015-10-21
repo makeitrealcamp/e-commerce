@@ -1,7 +1,7 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do  
+  root "pages#home"
 
-  
-  root to: "pages#home"
   devise_for :users
- 
+
+  resources :products, only: [:index, :show]
 end
