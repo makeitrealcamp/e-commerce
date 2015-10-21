@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :cart_items, only: [:index, :create, :update, :destroy]
 
   namespace :admin do
+    resources :categories, except: [:show]
     resources :products
     resources :orders, only: [:index, :edit, :update]  
   end
