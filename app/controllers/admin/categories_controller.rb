@@ -8,7 +8,7 @@ class Admin::CategoriesController < ApplicationController
     if @category.save
       redirect_to root_path
     else
-      render new
+      render 'admin/categories/new'
     end
   end
 
