@@ -5,6 +5,7 @@ class Admin::CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
+    @category.name = @category.name.titleize
     if @category.save
       redirect_to root_path
     else
