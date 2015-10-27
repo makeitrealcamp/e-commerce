@@ -1,2 +1,12 @@
-<h3>Nueva Categoría</h3>
-
+<div class='col-md-6 col-md-offset-3'>
+  <h1>Nueva Categoría</h1>
+  <%= simple_form_for @category , url: new_admin_category_path, method: :get do |f| %>
+    <h4 class="col-md-3">Nombre:</h4>
+    <div class="col-md-9">
+      <%= f.input :name, label: false%>
+    </div>
+    <div class='col-md-12'>
+    <%= f.button :submit, 'Crear Categoría', class:'btn btn-primary pull-right' %>
+    </div>
+  <% end %>
+</div>
