@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'omniauth-facebook'
 gem 'annotate'
 gem "figaro"
+gem 'simple_form'
 
 
 group :development, :test do  
