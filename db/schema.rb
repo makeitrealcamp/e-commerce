@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151026165222) do
+=======
+ActiveRecord::Schema.define(version: 20151023003107) do
+>>>>>>> Add omniauth-facebook and annotate gems to gemfile
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "user_id"
@@ -82,10 +86,15 @@ ActiveRecord::Schema.define(version: 20151026165222) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
-    t.integer  "role",                   limit: 1, default: 0,  null: false
+    t.integer  "role",                  limit: 1, default: 0,  null: false
+    t.string   "provider"
+    t.string   "uid"
+
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["provider"], name: "index_users_on_provider"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["uid"], name: "index_users_on_uid"
 
 end
