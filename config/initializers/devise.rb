@@ -238,6 +238,7 @@ Devise.setup do |config|
    
    config.omniauth :facebook, "552869428204787", 
                     "50b780599632941c5345885b8a66c30a",
+                    callback_url: "http://ubuntu-localhost.com:3000/users/auth/facebook/callback",
                     scope: 'email', info_fields: 'email, name'
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
