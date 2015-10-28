@@ -25,6 +25,7 @@
             <% else %>
             	<li><%= link_to "Registrarse", new_user_registration_path  %></li>
             	<li><%= link_to "Ingresar", new_user_session_path %></li>
+              <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
             <% end %>
           </ul>
         </div><!-- /.navbar-collapse -->
