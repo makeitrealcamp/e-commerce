@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20151026165222) do
-=======
+
+
+
 ActiveRecord::Schema.define(version: 20151023003107) do
->>>>>>> Add omniauth-facebook and annotate gems to gemfile
+
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "user_id"
