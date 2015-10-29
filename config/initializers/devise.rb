@@ -236,11 +236,12 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
    
-   config.omniauth :facebook, "552869428204787", 
-                    "50b780599632941c5345885b8a66c30a",
+   config.omniauth :facebook, ENV["facebook_key"], 
+                    ENV["facebook_secret"],
                     callback_url: "http://localhost:3000/users/auth/facebook/callback",
-                    #callback_url: "https://e-commerce-makeit.herokuapp.com/users/auth/facebook/callback",                    
                     scope: 'email', info_fields: 'email, name'
+
+  # callback_url: "https://e-commerce-makeit.herokuapp.com/users/auth/facebook/callback",                    
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
