@@ -12,13 +12,8 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'omniauth-facebook'
 gem 'annotate'
-<<<<<<< HEAD
 gem "figaro"
 gem 'simple_form'
-
-=======
-gem 'simple_form'
->>>>>>> Add simple form gem
 
 group :development, :test do  
   gem 'sqlite3'
