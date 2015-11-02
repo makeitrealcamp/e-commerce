@@ -11,9 +11,22 @@ class Admin::CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.name = @category.name.titleize
     if @category.save
-      redirect_to root_path
+      redirect_to admin_categories_path
     else
-      render 'admin/categories/new'
+      render 'new'
+    end
+  end
+
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    if @category.update(category_params)
+      redirect_to admin_categories_path
+    else
+      render 'edit'
     end
   end
 

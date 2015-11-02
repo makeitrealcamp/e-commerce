@@ -2,7 +2,8 @@
   <h3>Categorias de Productos</h3>
   <ol>
     <% @categories.each do |category| %>
-      <li><%= category.name %></li>
+      <li><%= category.name %>
+      <%= link_to 'Editar', edit_admin_category_path(category) %></li>
     <% end %>
   </ol>
 </div>

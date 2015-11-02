@@ -1,0 +1,14 @@
+<br>
+<%= simple_form_for ([:admin, @category]) do |f| %>
+  <h4 class="col-md-3">Nombre:</h4>
+  <div class="col-md-9">
+    <%= f.input :name, label: false%>
+  </div>
+  <div class='col-md-12'>
+  <% if params[:action] == 'new' %>
+    <%= f.button :submit, 'Crear Categoría', class:'btn btn-primary pull-right' %>
+  <% else %>
+    <%= f.button :submit, 'Crear Categoría', class:'btn btn-primary pull-right' %>
+  <% end %>
+  </div>
+<% end %>
