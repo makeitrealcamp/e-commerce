@@ -48,8 +48,21 @@
   </div><!-- /.container -->
 </nav>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+  <% if name == "danger" %>
+    <div class="alert alert-danger">
+  <% else  %>
+    <div class="alert alert-success">
+  <% end %>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    </div>
+  <% end %>
+<% end %>
+
+<!-- <p class="notice"><%#= notice %></p>
+<p class="alert"><%#= alert %></p> -->
 
 <%= yield %>
 
