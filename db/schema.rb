@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-
-
-ActiveRecord::Schema.define(version: 20151023003107) do
-
+ActiveRecord::Schema.define(version: 20151026165222) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "user_id"
@@ -86,16 +82,9 @@ ActiveRecord::Schema.define(version: 20151023003107) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
-<<<<<<< HEAD
-    t.string   "provider"
-    t.string   "uid"
     t.integer  "role",                   limit: 1, default: 0,  null: false
-=======
-    t.integer  "role",                  limit: 1, default: 0,  null: false
     t.string   "provider"
     t.string   "uid"
-
->>>>>>> 6776b8ae4a59b9253cbc0e6aee983cba86187670
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
